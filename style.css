@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background-color: #0b372dbb;
+}
+
+.logo {
+  width: 100px;
+}
+
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header ul a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.83rem;
+}
+
+.search a {
+  font-size: 1.05rem;
+  padding: 0 3rem;
+}
+
+.hamburger {
+  padding-left: 1.5rem;
+}
+
+.hamburger a {
+  padding: 0;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(115, 115, 115, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger .bar {
+  position: relative;
+  width: 52%;
+  height: 1.3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger .bar::before,
+.hamburger .bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 2px;
+}
+
+.hamburger .bar::before {
+  top: -4.5px;
+}
+
+.hamburger .bar::after {
+  top: 4.5px;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.parallax {
+  pointer-events: none;
+  transition: none;
+}
+
+.bg-img {
+  position: absolute;
+  width: 200%;
+  /* Adjust as needed to cover the entire screen */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mountain-10 {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  width: 30%;
+  left: 50%;
+}
+
+.fog-6 {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: -50%;
+  width: 100%;
+}
+
+
+
+.mountain-8 {
+  position: absolute;
+  z-index: 6;
+  top: 30%;
+  width: 60%;
+  left: 10%;
+}
+
+.fog-5 {
+  position: absolute;
+  z-index: 7;
+  top: 60%;
+  left: 0%;
+  width: 100%;
+}
+
+.mountain-7 {
+  position: absolute;
+  z-index: 8;
+  width: 100%;
+  top: 0%;
+  left: 100%;
+}
+
+.text {
+  position: absolute;
+  z-index: 9;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.text h2 {
+  font-weight: 100;
+  font-size: 6.8rem;
+  line-height: 0.88;
+}
+
+.text h1 {
+  font-weight: 800;
+  line-height: 0.88;
+  font-size: 8.7rem;
+}
+
+
+
+  width: .black-shadow {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 100%;
+    pointer-events: none;
+    width: 100%;
+  }
+
+  .fog-1 {
+    position: absolute;
+    z-index: 21;
+    top: 40%;
+    left: 25.69%;
+    width: 111.8%;
+  }
+
+  .vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center,
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.7));
+    pointer-events: none;
+  }
+
+  @media (max-width: 1100px) {
+    .text h1 {
+      font-size: 5.8rem;
+    }
+
+    .text h2 {
+      font-size: 4.7rem;
+    }
+  }
+
+  @media (max-width: 725px) {
+    .text h1 {
+      font-size: 5rem;
+      line-height: 1.1;
+    }
+
+    .text h2 {
+      font-size: 4.1rem;
+      line-height: 1.1;
+    }
+
+    header nav {
+      padding: 0 1rem;
+    }
+
+    .logo {
+      width: 75px;
+    }
+
+    header ul a {
+      font-size: 0.73rem;
+      padding: 0 0.9rem;
+    }
+
+    .search a {
+      font-size: 0.85rem;
+      padding: 0 1.8rem;
+    }
+
+    .hamburger {
+      padding-left: 0.9rem;
+    }
+
+    .hamburger a {
+      height: 30px;
+      width: 30px;
+    }
+
+    .bg-img {
+      width: auto;
+      height: 208.1%;
+    }
+
+    .fog-7 {
+      width: auto;
+      height: 146.17%;
+    }
+
+    .mountain-10 {
+      width: auto;
+      height: 77.59%;
+    }
+
+    .fog-6 {
+      width: auto;
+      height: 73.11%;
+    }
+
+    .mountain-9 {
+      height: 87.64%;
+      width: initial;
+    }
+
+    .mountain-8 {
+      height: 84.33%;
+      width: auto;
+    }
+
+    .fog-5 {
+      width: auto;
+      height: 54.16%;
+    }
+
+    .mountain-7 {
+      width: auto;
+      height: 72.26%;
+    }
+
+    .mountain-6 {
+      width: auto;
+      height: 56.78%;
+    }
+
+    .fog-4 {
+      width: auto;
+      height: 104.5%;
+    }
+
+    .mountain-5 {
+      width: auto;
+      height: 60.64%;
+    }
+
+    .fog-3 {
+      width: auto;
+      height: 90.78%;
+    }
+
+    .mountain-4 {
+      width: auto;
+      height: 71.42%;
+    }
+
+    .mountain-3 {
+      width: auto;
+      height: 96.86%;
+    }
+
+    .fog-2 {
+      width: auto;
+      height: 84.73%;
+    }
+
+    .mountain-2 {
+      display: none;
+    }
+
+    .mountain-1 {
+      width: auto;
+      height: 100.03%;
+    }
+
+    .fog-1 {
+      width: auto;
+      height: 89.86%;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .text h1 {
+      font-size: 3.3rem;
+    }
+
+    .text h2 {
+      font-size: 2.6rem;
+    }
+  }
+
+/* Define keyframes for animation */
+@keyframes moveMountain {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
+@keyframes moveFog {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50px); }
+}
+
+/* Apply animation to elements */
+.mountain-9, .mountain-8, .mountain-7, .fog-5{
+  animation: moveMountain 3s infinite alternate ease-in-out;
+}
+
+.fog-6, .fog-1, .mountain-10  {
+  animation: moveFog 4s infinite alternate ease-in-out;
+}
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .line {
+    width: 100vw;
+  }
+  .left, .right {
+    width: 50vw;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .left {
+    color:pink;
+    transform: skew(0deg, -15deg);
+  }
+  .right {
+    color: black;
+    transform: skew(0deg, 15deg);
+  }
+  .left .content {
+    width: 100vw;
+    text-align: center;
+  }
+  .right .content {
+    width: 100vw;
+    text-align: center;
+    transform: translate(-50vw);
+  }
+  span {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10vw;
+    text-transform: uppercase;
+    line-height: .8;
+    transition: ease-out .6s;
+  }
